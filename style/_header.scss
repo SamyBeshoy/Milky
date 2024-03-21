@@ -1,0 +1,166 @@
+// import variables file
+@use "variables" as *; 
+.first_header {
+    background-color: $main_color;
+    height: 35px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: inherit;
+        font-size: $font_four;
+        .box_one {
+            color: white;
+            :hover {
+                transform: translateY(-5px);
+            }
+            i {
+                transition: 0.2s;
+                margin: 0 10px;
+                cursor: pointer;
+            }
+        }
+        .box_two {
+            color: white;
+            display: flex;
+            align-items: center;
+            :hover {
+                transform: translateY(-5px);
+            }
+            i {
+                transition: 0.2s;
+                margin-right: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.second_header {
+    position: sticky;
+    top: -0.02px;
+    left: 0px;
+    z-index: 10000;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+    .container {
+        display: flex;
+        height: inherit;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            font-family: "Libre Baskerville", serif; 
+            font-weight: bold;
+            font-size: $font_two;
+            a {
+                color: $main_color;
+                text-decoration: none;
+            }
+        }
+        .box {
+            span:nth-child(1) {
+                a {
+                    color: $third_color;
+                }
+            }
+            span {
+                :hover {
+                    color: $third_color;
+                }
+                a {
+                    font-size: $font_three;
+                    transition: 0.4s;
+                    text-decoration: none;
+                    color: rgb(0, 0, 0);
+                    margin: 0 15px;
+                }
+            }
+        }
+        .links {
+            position: relative;
+            font-size: $font_three;
+        }
+        .links:hover .icon span:nth-child(2) {
+            width: 100%;
+        }
+        .links .icon {
+            width: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        .links .icon span {
+            background-color: #333;
+            margin-bottom: 5px;
+            height: 2px;
+        }
+        .links .icon span:first-child {
+            width: 100%;
+        }
+        .links .icon span:nth-child(2) {
+            width: 60%;
+            transition: 0.3s;
+        }
+        .links .icon span:last-child {
+            width: 100%;
+        }
+        .links ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+            position: absolute;
+            right: 0;
+            min-width: 200px;
+            top: calc(100% + 15px);
+            display: none;
+            z-index: 1;
+            border-radius: 10px;
+        }
+        .links ul::before {
+            content: "";
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent #f6f6f6 transparent;
+            position: absolute;
+            right: 5px;
+            top: -20px;
+        }
+        .links:hover ul {
+            display: block;
+        }
+        .links ul li a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #333;
+            transition: 0.3s;
+        }
+        .links ul li a:hover {
+            padding-left: 25px;
+            color: $third_color;
+        }
+        .links ul li:not(:last-child) a {
+            border-bottom: 1px solid #ddd;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .second_header {
+        .links {
+            display: none;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .second_header {
+        .box {
+            display: none;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .first_header {
+        display: none;
+    }
+}

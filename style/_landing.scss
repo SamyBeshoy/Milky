@@ -1,0 +1,58 @@
+// import variables file
+@use "variables" as *;
+.landing {
+    height: calc(100vh - 95px);
+    background-image: url("../imgs/carousel-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    .container {
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        div:nth-child(1) {
+            animation: animation_for_landing 0.25s;
+            font-size: $font_three;
+        }
+        div:nth-child(2) {
+            animation: animation_for_landing 0.50s;
+            font-family: "Libre Baskerville", serif; 
+            font-weight: bold;
+            font-size: $font_one;
+            margin: $margin 0;
+        }
+    }
+}
+.landing_two {
+    height: 50vh;
+    background-image: url("../imgs/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    div:nth-child(1) {
+        font-family: "Libre Baskerville", serif; 
+        font-weight: bold;
+        font-size: $font_one;
+        margin: 10px 0;
+    }
+    div:nth-child(2) {
+        font-size: $font_four;
+        margin: 10px 0;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .landing {
+        height: calc(100vh - 60px);
+    }
+}

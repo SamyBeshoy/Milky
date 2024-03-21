@@ -1,0 +1,111 @@
+.why {
+  padding: 2em 0;
+  background-color: rgba(244, 244, 244, 0.7333333333);
+}
+.why .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.why .container .box_one,
+.why .container .box_two {
+  animation: animation_for_sections linear both;
+  -webkit-animation-timeline: view(block);
+  -moz-animation-timeline: view(block);
+  animation-timeline: view(block);
+  -webkit-animation-range: entry-crossing 0% cover 50%;
+  -moz-animation-range: entry-crossing 0% cover 50%;
+  animation-range: entry-crossing 0% cover 50%;
+}
+.why .container .box_one .title {
+  margin: 0 0 20px 0;
+}
+.why .container .box_one .sub_tit {
+  margin: 20px 0;
+}
+.why .container .box_one .paragraph {
+  margin: 20px 0;
+}
+.why .container .box_one .more_btn {
+  margin: 20px 0;
+  animation: unset;
+}
+.why .container .box_two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  width: 25.625em;
+}
+.why .container .box_two .child_one {
+  background-color: #5B8C51;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 0;
+}
+.why .container .box_two .child_one img {
+  width: 4em;
+}
+.why .container .box_two .child_one div:nth-child(2) {
+  margin: 10px 0;
+  color: white;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.why .container .box_two .child_one div:nth-child(3) {
+  color: #EDDD5E;
+  font-size: 1em;
+}
+.why .container .box_two .child_two {
+  background-color: #EDDD5E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 0;
+}
+.why .container .box_two .child_two img {
+  width: 4em;
+}
+.why .container .box_two .child_two div:nth-child(2) {
+  margin: 10px 0;
+  color: black;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.why .container .box_two .child_two div:nth-child(3) {
+  color: #5B8C51;
+  font-size: 1em;
+}
+.why .container .box_two div:nth-child(1) {
+  border-radius: 15px 0 0 0;
+}
+.why .container .box_two div:nth-child(2) {
+  border-radius: 0 15px 0 0;
+}
+.why .container .box_two div:nth-child(3) {
+  border-radius: 0 0 0 15px;
+}
+.why .container .box_two div:nth-child(4) {
+  border-radius: 0 0 15px 0;
+}
+
+@media (max-width: 1000px) {
+  .why .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .why .container .box_one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .why .container .box_two {
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=_why.css.map */

@@ -1,0 +1,51 @@
+// import variables file
+@use "variables" as *;
+.products {
+    padding: $padding;
+    background-color: $background_color;
+    .container {
+        .title {
+            text-align: center;
+            margin-bottom: $margin;
+        }
+        .sub_tit {
+            text-align: center;
+            margin: $margin 0;
+        }
+        .boxs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            .box {
+                border-radius: $border_r;
+                background-color: white;
+                img {
+                    width: 15.625em;
+                }
+                div:nth-child(2) {
+                    text-align: center;
+                    font-family: "Libre Baskerville", serif; 
+                    font-weight: bold;
+                    margin: calc($margin - 10px) 0;
+                    font-size: $font_four;
+                }
+                div:nth-child(3) {
+                    text-align: center;
+                    margin: calc($margin - 10px) 0;
+                    font-size: $font_four;
+                    span:nth-child(1) {
+                        color: $third_color;
+                        margin: 0 5px;
+                    }
+                    span:nth-child(2) {
+                        color: $forth_color;
+                        margin: 0 5px;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+}

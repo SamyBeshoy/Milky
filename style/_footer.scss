@@ -1,0 +1,125 @@
+// import variables file
+@use "variables" as *;
+.footer_one {
+    background-color: $main_color;
+    padding: $padding;
+    .container {
+        .boxs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: $font_four;
+            .box_one {
+                .tit_f {
+                    color: white;
+                    font-family: "Libre Baskerville", serif; 
+                    font-weight: bold;
+                    margin-bottom: 15px;
+                }
+                div:nth-child(2),
+                div:nth-child(3),
+                div:nth-child(4) {
+                    color: rgba(255, 255, 255, 0.562);
+                    i {
+                        margin: 10px 0;
+                    }
+                }
+                div:nth-child(5) {
+                    margin-top: 15px;
+                    i {
+                        margin: 0 10px 0 0;
+                        padding: 8px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-color: $sec_color;
+                    }
+                }
+            }
+            .box_two {
+                .tit_f {
+                    color: white;
+                    font-family: "Libre Baskerville", serif; 
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                div:nth-child(2),
+                div:nth-child(4),
+                div:nth-child(6) {
+                    margin-top: 15px;
+                    color: rgba(255, 255, 255, 0.562);
+                }
+                div:nth-child(3),
+                div:nth-child(5),
+                div:nth-child(7) {
+                    color: rgb(255, 255, 255);
+                }
+            }
+            .box_three {
+                .tit_f {
+                    color: white;
+                    font-family: "Libre Baskerville", serif; 
+                    font-weight: bold;
+                }
+                div:nth-child(2) {
+                    color: rgba(255, 255, 255, 0.562);
+                    margin: 15px 0;
+                }
+                div:nth-child(3) {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    input:nth-child(1) {
+                        background-color: $main_color;
+                        color: white;
+                        border: 2px solid rgba(255, 255, 255, 0.562);
+                        padding: 15px;
+                        border-radius: 10px;
+                    }
+                    input:nth-child(2) {
+                        position: absolute;
+                        margin-right: 10px;
+                        background-color: $sec_color;
+                        border: unset;
+                        cursor: pointer;
+                        color: $main_color;
+                        padding: 5px;
+                        border-radius: 5px;
+                    }
+                } 
+            }
+        }
+    }
+}
+.footer_two {
+    text-align: center;
+    background-color: $sec_color;
+    padding: 15px;
+    font-size: $font_four;
+    span {
+        font-style: italic;
+        font-family: "Libre Baskerville", serif; 
+        font-weight: bold;
+        color: $third_color;
+    }
+}
+@media (max-width: 767px) {
+    .footer_one {
+        .container {
+            .boxs {
+                flex-direction: column;
+                text-align: center;
+                .box_one {
+                    div:nth-child(5) {
+                        i {
+                            margin: 0 5px;
+                        }
+                    }
+                }
+                .box_two {
+                    margin: 50px 0;
+                }
+            }
+        }
+    }
+}

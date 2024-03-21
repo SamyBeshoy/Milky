@@ -1,0 +1,146 @@
+// import variables file
+@use "variables" as *; 
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    animation: animation_for_body 0.75s;
+}
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.top {
+    &.show {
+        display: none;
+    }
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: $third_color;
+    color: white;
+    font-weight: bold;
+    font-size: $font_four;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 454544444;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.title {
+    color: $third_color;
+    text-transform: uppercase;
+    font-size: $font_four;
+}
+.sub_tit {
+    color: $main_color;
+    font-weight: bold;
+    font-family: "Libre Baskerville", serif;
+    font-size: $font_three;
+}
+.paragraph {
+    color: $forth_color;
+    width: 30em;
+    font-size: $font_four;
+}
+.more_btn {
+    &:hover {
+        transform: scale(1.08);
+    }
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    animation: animation_for_landing 0.75s;
+    font-size: $font_four;
+    background-color: $sec_color;
+    width: fit-content;
+    padding: 10px 25px;
+    border-radius: 20px;
+    a {
+        color: $main_color;
+        text-decoration: none;
+    }
+}
+@keyframes animation_for_body {
+    from {
+        opacity: 0;
+        transform: translatey(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translatey(0px);
+    }
+}
+@keyframes animation_for_landing {
+    from {
+        opacity: 0;
+        transform: translatey(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translatey(0px);
+    }
+}
+@keyframes animation_for_sections {
+    from {
+        opacity: 0;
+        transform: translatey(20px)
+    }
+    to {
+        opacity: 1;
+        transform: translatey(0px)
+    }
+}
+// -----media queries from bootstrap-----
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    .container {
+        width: 550px;
+    }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .container {
+        width: 750px;
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    .container {
+        width: 970px;
+    }
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+@media (max-width: 500px) { 
+    html {
+        font-size: 12px;
+    }
+}
+@media (max-width: 400px) { 
+    html {
+        font-size: 11px;
+    }
+}
+@media (max-width: 350px) { 
+    html {
+        font-size: 10px;
+    }
+}
+@media (max-width: 320px) { 
+    html {
+        font-size: 9px;
+    }
+}
+@media (max-width: 280px) { 
+    html {
+        font-size: 8px;
+    }
+}

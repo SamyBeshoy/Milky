@@ -1,0 +1,284 @@
+include mixin.pug
+doctypehtml
+html(lang="en")
+    block head
+        head
+            +head("Milky")
+    body
+        block scroll_btn
+            // scroll btn
+            <span class="top show"><i class="fa-solid fa-arrow-up"></i></span>
+            // scroll btn
+        block header
+            // header
+            .first_header
+                .container
+                    .box_one
+                        |Follow Us: <i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-x-twitter"></i><i class="fa-brands fa-linkedin-in"></i><i class="fa-brands fa-instagram"></i>
+                    .box_two
+                        <i class="fa-solid fa-phone"></i> Call Us: +012 345 6789
+            .second_header
+                .container 
+                    .logo
+                        a(href="index.html") Milky
+                    .box
+                        span
+                            a(href="index.html") Home
+                        span
+                            a(href="about.html") About Us
+                        span
+                            a(href="services.html") Services
+                        span
+                            a(href="products.html") Products
+                    .links
+                        .icon
+                            //- JavaScript Power
+                            -for(let i = 1; i < 4; i++)
+                                span
+                        ul
+                            li
+                                a(href="index.html") Home
+                            li
+                                a(href="about.html") About Us
+                            li
+                                a(href="services.html") Services
+                            li
+                                a(href="products.html") Products
+            // header
+        block landing
+            // landing
+            section(class="landing" id="landing") 
+                .container 
+                    div Welcome To Our Dairy Farm
+                    div Best Organic 
+                        br 
+                        | Dairy Products
+                    .more_btn 
+                        a(href="#about") Explore More
+            // landing
+        block about
+            // about
+            section(class="about" id="about")
+                .container
+                    .box_one
+                        .child_abnormal 
+                            div 25
+                            div Years Experience
+                        .child
+                            img(src="imgs/service-1.jpg" alt="cow")
+                        .child
+                            img(src="imgs/service-2.jpg" alt="cow")
+                        .child
+                            img(src="imgs/service-3.jpg" alt="cow")
+                    .box_two
+                        .title about us
+                        .sub_tit Know About Our Dairy Farm
+                            br
+                            | & Our History
+                        .paragraph Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam 
+                            br 
+                            | et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna 
+                            br 
+                            |dolore erat amet
+                        .boxs
+                            .box
+                                img(src="imgs/service.png" alt="service")
+                                div Dedicated Services
+                                div Clita erat ipsum et lorem et sit, sed 
+                                    br 
+                                    |stet lorem sit clita
+                            .box
+                                img(src="imgs/product.png" alt="product")
+                                div Organic Products
+                                div Clita erat ipsum et lorem et sit, sed 
+                                    br 
+                                    |stet lorem sit clita
+                        .more_btn 
+                            a(href="#why") Explore More
+            // about
+        block why
+            // why
+            section(class="why" id="why")
+                .container
+                    .box_one
+                        .title why us
+                        .sub_tit Few Reasons Why
+                            br
+                            | People Choosing Us!
+                        .paragraph Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam 
+                            br 
+                            | amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita 
+                            br
+                            | duo justo magna dolore erat amet
+                        .more_btn 
+                            a(href="#services") Explore More
+                    .box_two
+                        .child_one
+                            img(src="imgs/experience.png" alt="experience")
+                            div 25
+                            div Years Experience
+                        .child_two
+                            img(src="imgs/award.png" alt="award")
+                            div 183
+                            div Award Winning
+                        .child_two
+                            img(src="imgs/animal.png" alt="animal")
+                            div 2619
+                            div Total Animals
+                        .child_one
+                            img(src="imgs/client.png" alt="client")
+                            div 51940
+                            div Happy Clients
+            // why
+        block ads
+            // ads
+            section(class="ads")
+                .container
+                    .box
+                        img(src="imgs/banner-1.jpg" alt="cow")
+                        .text
+                            div We Sell Best 
+                                br
+                                | Dairy Products
+                            div Clita erat ipsum et lorem et sit, sed stet 
+                                br
+                                | lorem sit clita duo justo magna dolore erat amet
+                            .more_btn 
+                                a(href="#services") Explore More
+                    .box
+                        img(src="imgs/banner-2.jpg" alt="cow")
+                        .text
+                            div We Sell Best 
+                                br
+                                | Dairy Products
+                            div Clita erat ipsum et lorem et sit, sed stet 
+                                br
+                                | lorem sit clita duo justo magna dolore erat amet
+                            .more_btn 
+                                a(href="#services") Explore More
+        block services
+            // services
+            section(class="services" id="services")
+                .container
+                    .box_one
+                        .title our services
+                        .sub_tit Services That We Offer
+                            br
+                            | For Entrepreneurs
+                    .box_two
+                        .box
+                            .img
+                                img(src="imgs/service-1.jpg" alt="service")
+                            .text
+                                div Best Animal Selection
+                                div Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.
+                        .box
+                            .img 
+                                img(src="imgs/service-2.jpg" alt="service")
+                            .text
+                                div Breeding & Veterinary
+                                div Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.
+                        .box
+                            .img 
+                                img(src="imgs/service-3.jpg" alt="service")
+                            .text
+                                div Care & Milking
+                                div Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.
+            // services
+        block gallery
+            // gallery
+            section.gallery
+                //- JavaScript Power
+                -for(let i = 1; i < 9; i++)
+                    img(src=`imgs/gallery-${i}.jpg` alt="cow photo")
+            // gallery
+        block products
+            // products
+            section(class="products" id="products")
+                .container
+                    .title our products
+                    .sub_tit Dairy Products For 
+                        br
+                        | Healthy Living
+                    .boxs
+                        .box
+                            img(src="imgs/product-1.jpg" alt="product")
+                            div Pure Milk
+                            div
+                                span $19.00
+                                span $29.00
+                        .box
+                            img(src="imgs/product-2.jpg" alt="product")
+                            div Fresh Meat
+                            div
+                                span $19.00
+                                span $29.00
+                        .box
+                            img(src="imgs/product-3.jpg" alt="product")
+                            div Dairy Products
+                            div
+                                span $19.00
+                                span $29.00
+                        .box
+                            img(src="imgs/product-4.jpg" alt="product")
+                            div Organic Food
+                            div
+                                span $19.00
+                                span $29.00
+            // products
+        block team
+            // team
+            section(class="team" id="team")
+                .container
+                    .title our team
+                    .sub_tit Experienced Team
+                        br
+                        | Members
+                    .boxs
+                        .box
+                            img(src="imgs/team-1.jpg" alt="person")
+                            div Adam Crew
+                            div Founder
+                            div <i class="fa-brands fa-facebook"></i><i class="fa-brands fa-x-twitter"></i><i class="fa-brands fa-instagram"></i>
+                        .box
+                            img(src="imgs/team-2.jpg" alt="person")
+                            div Doris Jordan
+                            div Veterinarian
+                            div <i class="fa-brands fa-facebook"></i><i class="fa-brands fa-x-twitter"></i><i class="fa-brands fa-instagram"></i>
+                        .box
+                            img(src="imgs/team-3.jpg" alt="person")
+                            div Jack Dawson
+                            div Farmer
+                            div <i class="fa-brands fa-facebook"></i><i class="fa-brands fa-x-twitter"></i><i class="fa-brands fa-instagram"></i>
+            // team
+        block footer
+            // footer
+            .footer_one
+                .container
+                    .boxs
+                        .box_one
+                            .tit_f Our Office
+                            div <i class="fa-solid fa-location-dot"></i>123 Street, New York, USA
+                            div <i class="fa-solid fa-phone"></i>+012 345 6789
+                            div <i class="fa-solid fa-envelope"></i>info@example.com
+                            div <i class="fa-brands fa-x-twitter"></i><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-youtube"></i><i class="fa-brands fa-linkedin-in"></i>
+                        .box_two
+                            .tit_f Business Hours
+                            div Monday - Friday
+                            div 09:00 am - 07:00 pm
+                            div Saturday
+                            div 09:00 am - 12:00 pm
+                            div Sunday
+                            div Closed
+                        .box_three
+                            .tit_f Newsletter
+                            div Dolor amet sit justo amet elitr 
+                                br 
+                                |clita ipsum elitr est.
+                            div 
+                                input(type="text", name="yourMail",placeholder="Your Email")
+                                input(type="button", value="Sign Up")
+            .footer_two Copyright 2024 © by 
+                span beshoy samy.
+            // footer
+            script(src="main.js")

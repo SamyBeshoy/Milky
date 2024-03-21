@@ -1,0 +1,116 @@
+// import variables file
+@use "variables" as *;
+.why {
+    padding: $padding;
+    background-color: $background_color;
+    .container {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        .box_one,
+        .box_two {
+            animation: animation_for_sections linear both;
+            -webkit-animation-timeline: view(block);
+            -moz-animation-timeline: view(block);
+            animation-timeline: view(block);
+            -webkit-animation-range: entry-crossing 0% cover 50%;
+            -moz-animation-range: entry-crossing 0% cover 50%;
+            animation-range: entry-crossing 0% cover 50%;
+        }
+        .box_one {
+            .title {
+                margin: 0 0 $margin 0;
+            }
+            .sub_tit {
+                margin: $margin 0;
+            }
+            .paragraph {
+                margin: $margin 0;
+            }
+            .more_btn {
+                margin: $margin 0;
+                animation: unset;
+            }
+        }
+        .box_two {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            width: 25.625em;
+            .child_one {
+                background-color: $third_color;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 35px 0;
+                img {
+                    width: 4em;
+                }
+                div:nth-child(2) {
+                    margin: 10px 0;
+                    color: white;
+                    font-family: "Libre Baskerville", serif;
+                    font-size: $font_three; 
+                    font-weight: bold;
+                }
+                div:nth-child(3) {
+                    color: $sec_color;
+                    font-size: $font_four; 
+                }
+            }
+            .child_two {
+                background-color: $sec_color;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 35px 0;
+                img {
+                    width: 4em;
+                }
+                div:nth-child(2) {
+                    margin: 10px 0;
+                    color: black;
+                    font-family: "Libre Baskerville", serif;
+                    font-size: $font_three; 
+                    font-weight: bold;
+                }
+                div:nth-child(3) {
+                    color: $third_color;
+                    font-size: $font_four; 
+                }
+            }
+            div:nth-child(1) {
+                border-radius: $border_r 0 0 0;
+            }
+            div:nth-child(2) {
+                border-radius: 0 $border_r 0 0;
+            }
+            div:nth-child(3) {
+                border-radius: 0 0 0 $border_r;
+            }
+            div:nth-child(4) {
+                border-radius: 0 0 $border_r 0;
+            }
+        }
+    }
+}
+@media (max-width: 1000px) { 
+    .why {
+        .container {
+            flex-direction: column;
+            justify-content: center;
+            .box_one {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+            }
+            .box_two {
+                margin-top: $margin;
+            }
+        }
+    }
+}

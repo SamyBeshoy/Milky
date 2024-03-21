@@ -1,0 +1,117 @@
+// import variables file
+@use "variables" as *;
+.about {
+    padding: $padding;
+    background-color: $background_color;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .box_one,
+        .box_two {
+            animation: animation_for_sections linear both;
+            -webkit-animation-timeline: view(block);
+            -moz-animation-timeline: view(block);
+            animation-timeline: view(block);
+            -webkit-animation-range: entry-crossing 0% cover 50%;
+            -moz-animation-range: entry-crossing 0% cover 50%;
+            animation-range: entry-crossing 0% cover 50%;
+        }
+        .box_one {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            width: 25.625em;
+            gap: 10px;
+            .child_abnormal {
+                background-color: $sec_color;
+                position: relative;
+                top: 25px;
+                left: 25px;
+                border-radius: $border_r;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                div:nth-child(1) {
+                    color: $main_color;
+                    font-family: "Libre Baskerville", serif;
+                    font-size: $font_five; 
+                    font-weight: bold;
+                }
+                div:nth-child(2) {
+                    color: $forth_color;
+                    font-size: $font_four;
+                }
+            }
+            .child {
+                line-height: 0;
+                img {
+                    width: 100%;
+                    border-radius: $border_r;
+                }
+            }
+        }
+        .box_two {
+            .title {
+                margin: 0 0 $margin 0;
+            }
+            .sub_tit {
+                margin: $margin 0;
+            }
+            .paragraph {
+                margin: $margin 0;
+            }
+            .boxs {
+                display: flex;
+                justify-content: space-between;
+                margin: $margin 0;
+                div:nth-child(1) {
+                    margin-right: $margin;
+                }
+                .box {
+                    img {
+                        margin: 10px 0;
+                        width: 4em;
+                    }
+                    div:nth-child(2) {
+                        margin: 10px 0;
+                        font-size: $font_four;
+                    }
+                    div:nth-child(3) {
+                        color: $forth_color;
+                        width: 12em;
+                        margin: 10px 0;
+                        font-size: $font_four;
+                    }
+                }
+            }
+            .more_btn {
+                margin: $margin 0 0 0;
+                animation: unset;
+            }
+        }
+    }
+}
+@media (max-width: 1000px) { 
+    .about {
+        .container {
+            flex-direction: column;
+            justify-content: center;
+            .box_one {
+                margin-bottom: $margin;
+            }
+            .box_two {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                .title {
+                    margin: $margin 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+// import variables file
+@use "variables" as *;
+.ads {
+    background-image: url("../imgs/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: $padding;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        .box {
+            display: flex;
+            align-items: center;
+            color: white;
+            img {
+                width: 10em;
+                margin-right: 20px;
+            }
+            .text {
+                div:nth-child(1) {
+                    font-size: $font_three;
+                    font-family: "Libre Baskerville", serif; 
+                    font-weight: bold;
+                    margin-bottom: $margin;
+                }
+                div:nth-child(2) {
+                    font-size: $font_four;
+                    margin: $margin 0;
+                }
+                .more_btn {
+                    animation: unset;
+                    margin-top: $margin;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1000px) { 
+    .ads {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            .box {
+                margin: $margin 0;
+            }
+        }
+    }
+}

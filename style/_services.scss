@@ -1,0 +1,57 @@
+// import variables file
+@use "variables" as *;
+.services {
+    padding: $padding;
+    background-color: $background_color;
+    .container {
+        .box_one {
+            .title {
+                text-align: center;
+                margin-bottom: $margin;
+            }
+            .sub_tit {
+                text-align: center;
+                margin: $margin 0;
+            }
+        }
+        .box_two {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: $margin;
+            .box {
+                transition: all 0.5s ease;
+                background-color: white;
+                margin: 0 $margin;
+                width: 20em;
+                .img {
+                    background-color: $background_color;
+                    img {
+                        position: relative;
+                        left: 20px;
+                        top: 30px;
+                        width: 7em;
+                        border: 10px solid rgb(255, 255, 255);
+                        border-radius: 50%;
+                    }
+                }
+                .text {
+                    padding: 20px ;
+                    div:nth-child(1) {
+                        font-family: "Libre Baskerville", serif; 
+                        font-weight: bold;
+                        margin: $margin 0;
+                        font-size: $font_four;
+                    }
+                    div:nth-child(2) {
+                        display: inline;
+                        font-size: $font_four;
+                        margin: $margin 0;
+                        color: $forth_color;
+                    }
+                }
+            }
+        }
+    }
+}
