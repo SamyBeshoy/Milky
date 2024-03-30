@@ -786,7 +786,6 @@ body {
 .team .container .boxs .box img {
   width: 15.625em;
   padding: 20px;
-  padding-bottom: 0px;
   border-radius: 25px;
 }
 .team .container .boxs .box div:nth-child(2) {
